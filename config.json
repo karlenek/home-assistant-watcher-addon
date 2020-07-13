@@ -1,0 +1,44 @@
+{
+  "name": "Home Assistant Watcher",
+  "version": "0.1.0",
+  "stage": "experimental",
+  "slug": "home-assistant-watcher-addon",
+  "description": "Add-on that watches the state of an event bus",
+  "url": "https://github.com/karlenek/home-assistant-watcher-addon",
+  "startup": "once",
+  "boot": "auto",
+  "environment": {
+    "CONFIG_PATH": "../data/options.json"
+  },
+  "options": {
+    "server": {
+      "token": "1234"
+    },
+    "client": {
+      "host": "localhost:8080",
+      "token": "1234"
+    },
+    "mqtt": {
+      "host": "192.168.1.2",
+      "port": 1883,
+      "username": "mqtt",
+      "password": "secret"
+    }
+  },
+  "schema": {
+    "server": {
+      "token": "str"
+    },
+    "client": {
+      "host": "str",
+      "token": "str"
+    },
+    "mqtt": {
+      "host": "str",
+      "port": "int",
+      "username": "str",
+      "password": "str"
+    }
+  },
+  "arch": ["amd64", "armv7", "armhf", "i386" , "aarch64"]
+}
